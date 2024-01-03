@@ -1,12 +1,12 @@
 
 
-const Description  = () =>{
+const Tecnologias  = () =>{
     return(
         <div className="bg-[#191919] col-span-2 row-span-2 rounded-lg m-2">
-            <p>Hola </p>
+            <p>Tecnologias </p>
         </div>
     )
 }
 
 
-export default Description
+export default Tecnologias

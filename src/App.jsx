@@ -1,43 +1,55 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
-import Description from './components/description.jsx'
-import Icons from './components/Icons.jsx'
-import Name from './components/Name.jsx'
-import Redes from './components/Redes.jsx'
+import Tecnologias from './components/bentoGrid/Tecnologias.jsx'
+import Name from './components/bentoGrid/Name.jsx'
+import Icons from './components/bentoGrid/Icons.jsx'
+import Redes from './components/bentoGrid/Redes.jsx'
+// import Redes from './components/Redes.jsx'
 
-// SVG´S
+// // SVG´S
 import GitHub from './icons/GitHub.jsx'
 import Linkedln from './icons/Linkedln.jsx'
+import Hora from './components/Hora.jsx'
 
 function App() {
 
-  const [component, setComponent] = useState('Name');
-
   return (
-    <>  
+    <> 
 
-      <Name/>
+      <div
+        className='w-11/12  border grid grid-rows-3 grid-cols-4 p-3  border-blue-800 h-screen'
+      >
+        <Name/>
 
-      <Description/>
 
-      <Icons
-        cardStyle={`bg-blue-400 row-span-2`}
-        icon={<GitHub/>}
-      />
+        <Tecnologias/>
 
-      <Icons
-        cardStyle={`bg-gray-300`}
-        icon={<Linkedln/>}
-      />
+        <Icons
+          cardStyle={`bg-blue-400 row-span-2`}
+          icon={<GitHub/>}
+        />
 
-      <Redes
-        cardStyle="col-span-2 border-yellow-300"
-        content="Proyectos"
-      />
+        <Icons
+          cardStyle={`bg-gray-300`}
+          icon={<Linkedln/>}
+        >
+        </Icons>
 
-      <Redes/>
+        <Redes
+          cardStyle="col-span-2 border-yellow-300"
+          content="Proyectos"
+        />
+
+        <Hora/>
+      </div>
+
+      <div 
+        className='border-blue-500 border-[3px] h-5 w-11/12'
+      >
+
+      </div>
+
     </>
-  )
-}
+  )}
 
 export default App
