@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer utilities {
+    .granulated-bg {
+      background: linear-gradient(to bottom right, #4C51BF, #8A2BE2); /* Degradado de azul a morado */
+      position: relative;
+    }
+  
+    .granulated-bg::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" preserveAspectRatio="none"%3E%3Cg fill="%23000000" stroke="%23000000" stroke-width="3"%3E%3Ccircle cx="10" cy="10" r="4" /%3E%3Ccircle cx="30" cy="10" r="4" /%3E%3Ccircle cx="50" cy="10" r="4" /%3E%3Ccircle cx="70" cy="10" r="4" /%3E%3Ccircle cx="90" cy="10" r="4" /%3E%3Ccircle cx="110" cy="10" r="4" /%3E%3Ccircle cx="130" cy="10" r="4" /%3E%3Ccircle cx="150" cy="10" r="4" /%3E%3Ccircle cx="10" cy="30" r="4" /%3E%3Ccircle cx="30" cy="30" r="4" /%3E%3Ccircle cx="50" cy="30" r="4" /%3E%3Ccircle cx="70" cy="30" r="4" /%3E%3Ccircle cx="90" cy="30" r="4" /%3E%3Ccircle cx="110" cy="30" r="4" /%3E%3Ccircle cx="130" cy="30" r="4" /%3E%3Ccircle cx="150" cy="30" r="4" /%3E%3C/svg%3E');
+      pointer-events: none;
+      z-index: 1;
+      opacity: -1; /* Ajusta la opacidad según tus necesidades */
+    }
+  }
