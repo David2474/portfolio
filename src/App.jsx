@@ -5,8 +5,7 @@ import Tecnologias from "./components/bentoGrid/Tecnologias.jsx";
 import Name from "./components/bentoGrid/Name.jsx";
 import Icons from "./components/bentoGrid/Icons.jsx";
 import Hora from "./components/bentoGrid/Hora.jsx";
-import Description from "./components/aboutMe/Description.jsx";
-import Button from "./components/aboutMe/Button.jsx";
+
 
 // // SVG´S
 import GitHub from "./icons/GitHub.jsx";
@@ -16,49 +15,44 @@ import Bandera from "./components/bentoGrid/Bandera.jsx";
 
 // import Img from "./components/aboutMe/Img.jsx";
 import ContainCard from "./components/proyects/ContainCard.jsx";
+import ContAboutMe from "./components/aboutMe/ContAboutMe.jsx";
+import ContactForm from "./components/contacMe/ContactForm.jsx";
+import Footer from "./components/footer/footer.jsx";
 
 function App() {
   return (
     <>
-      <section className="w-11/12 border grid grid-rows-3 grid-cols-4 p-3  border-blue-800 h-screen">
+      <section className="w-12/12 sm:w-11/12 text-[#7E00DE] grid grid-rows-3 grid-cols-4 p-3 h-screen">
         <Name />
 
         <Tecnologias />
 
-        <Icons cardStyle={`bg-blue-400 row-span-2`} icon={<GitHub />} />
+        <Icons cardStyle={`bg-[#2E2E2E] row-span-1 sm:row-span-2`} icon={<GitHub />} />
 
-        <Icons cardStyle={`bg-gray-300 `} icon={<Linkedln />}></Icons>
+        <Icons cardStyle={`bg-[#2E2E2E]`} icon={<Linkedln />}></Icons>
         <Hora />
         <Bandera icon={<Quetzalt />} />
       </section>
 
-      <section className="border-red-500 border-[3px] w-11/12">
-        <div className="flex border bg-blue-900 justify-between text-white">
-          <div className="flex flex-col justify-center w-3/5 h-[440px] px-10">
-            <h1 className="text-3xl mb-4">Sobre mi</h1>
-            <Description />
-            <div className="self-end mx-5">
-              <Button />
-            </div>
-          </div>
-          <div className="w-2/5 h-[400px]   flex items-center justify-center text-black">
-            {/* <Img></Img> */}
-            <Quetzalt />
-          </div>
+      <section className="w-12/12 sm:w-11/12">
+        <div className="flex justify-between my-10 items-center">
+            <ContAboutMe/>
         </div>
 
-        <div className=" bg-blue-500 border-t-2 flex flex-col border-black py-10 text-black">
-          <h2 className="text-center text-3xl py-6">Proyectos</h2>
+        <div className=" flex flex-col py-10 mt-20">
+          <h2 className="text-center text-3xl py-6 text-[#7E00DE]">Proyectos</h2>
           <ContainCard/>
         </div>
 
         {/* CONTACT SECTION */}
 
-        <div className="bg-red-600 text-black">
-          <p>Contacto</p>
-          
+        <div className="sm:py-10">
+          <p className="text-center text-[#7E00DE] mb-8 text-3xl">Contacto</p>
+         <ContactForm/>
         </div>
 
+
+        <Footer></Footer>
       </section>
     </>
   );

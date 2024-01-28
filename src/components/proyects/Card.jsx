@@ -1,5 +1,5 @@
 import proyects from "./poryectList"
-import LinkUi from "./LinkUi"
+// import LinkUi from "./LinkUi"
 
 
 export default function Card() {
@@ -8,32 +8,34 @@ export default function Card() {
       {proyects.map((proyect) => (
         <div
           key={proyect.id}
-          className="border-2 border-black bg-white my-4 w-9/12 h-[350px] rounded flex justify-between"
+          className="p-4 mb-20 w-12/12 sm:w-9/12 rounded flex flex-col"
         >
-          <section className="h-full ml-4 w-5/12 flex justify-center items-center">
+          <section className="flex sm:p-4 mb-6 sm:mb-0 w-full">
+            <div className="h-5/6 my-1">
+              <p className="text-[22px] mb-3 text-[#7E00DE]">
+                {proyect.name}
+              </p>
+              <p className="text-[16px] text-white ">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
+                consequuntur, accusamus corporis suscipit incidunt, cumque
+                commodi voluptate mollitia non sapiente quam sequi quos minus
+                vitae fugit! Dolores vel perferendis totam.
+              </p>
+            </div>
+          </section>
+
+          <section className="h-full  w-full flex justify-center items-center">
             <img
-              className="w-11/12 h-5/6 rounded-lg object-cover"
+              className="w-[100%] sm:w-11/12 h-[250px] sm:h-[420px] rounded-lg bg-contain"
               src={proyect.imageUrl}
               alt="imagen del proyecto"
             />
           </section>
-          <section className="flex flex-col w-7/12 h-full p-4">
-            <div className="h-5/6 my-1">
-                <p className="text-[26px] text-center">{proyect.name}</p>
-                <p className="text-[18px]">Lo que me dejo el proyecto</p>
-                <ol className="list-disc ml-4">
-                  <li>{proyect.oneList}</li>
-                  <li>{proyect.twoList}</li>
-                  <li>{proyect.threeList}</li>
-                </ol>
-            </div>
-            <div className="self-end h-1/6 px-4">
-                <a className="flex justify-center items-center" href={proyect.link}>
-                  {<LinkUi />}
-                </a>
-            </div>
+
+          <section className="">
+            <p className="bg-[#7E00DE] w-32 p-1 text-center text-white rounded-sm mt-8 sm:ml-3">Github</p>
           </section>
         </div>
       ))}
     </>
-)}
+  );}

@@ -15,7 +15,7 @@ const Tecnologias  = () =>{
       ];
 
     return(
-        <div className="granulated-bg s col-span-2 row-span-2 rounded-lg m-2">
+        <div className="bg-[#2E2E2E] col-span-3 row-span-2 sm:col-span-2 sm:row-span-2 rounded-lg m-2">
             <div>
                 <p className="text-3xl text-center my-6">
                     Tecnologias 
@@ -24,9 +24,9 @@ const Tecnologias  = () =>{
 
             <div className="flex justify-center mx-4 flex-wrap">
                 {tecnologias.map((tecnologia) => (
-                    <li key={tecnologia.id} className="h-12 my-3 list-none mx-3">
+                    <li key={tecnologia.id} className="sm:h-12 mx-1 my-1 sm:my-3 list-none sm:mx-3">
                         <img 
-                            className="w-14 h-14" 
+                            className="w-10 h-10 sm:w-14 sm:h-14" 
                             src={tecnologia.url} alt={tecnologia.nombre} 
                         />
                     </li>

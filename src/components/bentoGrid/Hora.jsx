@@ -19,7 +19,7 @@ export default function Hora() {
     }, []);
 
   return (
-    <div className="bg-[#191919] text-6xl col-span-2 cursor-pointer flex justify-center items-center m-2 rounded-lg">
+    <div className="bg-[#2E2E2E] text-6xl col-span-3 sm:col-span-2 cursor-pointer flex justify-center items-center m-2 rounded-lg">
         {horaActual}
     </div>
   )
