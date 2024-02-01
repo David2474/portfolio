@@ -8,7 +8,7 @@ function ContactForm() {
   const [state, handleSubmit] = useForm("xgegvkag");
   if (state.succeeded) {
       return <p 
-        className='text-center text-[18px]'
+        className='text-center text-[20px] text-[#7E00DE]'
       >Gracias por contactarme!</p>;
   }
   return (
@@ -56,7 +56,7 @@ function ContactForm() {
       <button 
         type="submit" 
         disabled={state.submitting}
-        className='bg-[#7E00DE] p-1 w-32 my-6 rounded-sm text-white text-[18px]'
+        className='bg-[#7E00DE] hover:bg-[#6200AD] p-1 w-32 my-6 rounded-sm text-white text-[18px]'
       >
         Enviar
       </button>

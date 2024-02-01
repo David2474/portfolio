@@ -39,15 +39,15 @@ function App() {
             <ContAboutMe/>
         </div>
 
-        <div className=" flex flex-col py-10 mt-20">
-          <h2 className="text-center text-3xl py-6 text-[#7E00DE]">Proyectos</h2>
+        <div className=" flex flex-col sm:py-10 sm:mt-20">
+          <h2 className="text-center text-4xl mb-4 py-6 text-[#7E00DE]">Proyectos</h2>
           <ContainCard/>
         </div>
 
         {/* CONTACT SECTION */}
 
         <div className="sm:py-10">
-          <p className="text-center text-[#7E00DE] mb-8 text-3xl">Contacto</p>
+          <p className="text-center text-[#7E00DE] mb-8 text-4xl">Contacto</p>
          <ContactForm/>
         </div>
 

@@ -17,7 +17,7 @@ const Tecnologias  = () =>{
     return(
         <div className="bg-[#2E2E2E] col-span-3 row-span-2 sm:col-span-2 sm:row-span-2 rounded-lg m-2">
             <div>
-                <p className="text-3xl text-center my-6">
+                <p className="text-3xl font-medium text-center my-6">
                     Tecnologias 
                 </p>
             </div>

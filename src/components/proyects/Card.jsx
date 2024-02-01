@@ -16,10 +16,7 @@ export default function Card() {
                 {proyect.name}
               </p>
               <p className="text-[16px] text-white ">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque
-                consequuntur, accusamus corporis suscipit incidunt, cumque
-                commodi voluptate mollitia non sapiente quam sequi quos minus
-                vitae fugit! Dolores vel perferendis totam.
+                {proyect.description}
               </p>
             </div>
           </section>
@@ -33,7 +30,13 @@ export default function Card() {
           </section>
 
           <section className="">
-            <p className="bg-[#7E00DE] w-32 p-1 text-center text-white rounded-sm mt-8 sm:ml-3">Github</p>
+            <p className="bg-[#7E00DE] hover:bg-[#6200AD] w-32 p-2 text-center text-white rounded-sm mt-6 sm:ml-3">
+              <a 
+                href={proyect.link}
+                >
+                  Github
+                </a>
+            </p>
           </section>
         </div>
       ))}
