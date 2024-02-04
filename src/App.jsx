@@ -22,14 +22,21 @@ import Footer from "./components/footer/footer.jsx";
 function App() {
   return (
     <>
-      <section className="w-12/12 sm:w-11/12 text-[#7E00DE] grid grid-rows-3 grid-cols-4 p-3 h-screen">
+      <section className="w-12/12 sm:w-11/12 text-[#7E00DE] grid grid-rows-3 grid-cols-4 p-3 sm:h-screen h-[550px]">
         <Name />
 
         <Tecnologias />
 
-        <Icons cardStyle={`bg-[#2E2E2E] row-span-1 sm:row-span-2`} icon={<GitHub />} />
+        <Icons
+          href={"https://github.com/David2474"} 
+          cardStyle={`bg-[#2E2E2E] row-span-1 sm:row-span-2`} 
+          icon={<GitHub />} />
 
-        <Icons cardStyle={`bg-[#2E2E2E]`} icon={<Linkedln />}></Icons>
+        <Icons 
+          href={"https://www.linkedin.com/in/dev-david-gutierrez/"}
+          cardStyle={`bg-[#2E2E2E]`} 
+          icon={<Linkedln />}/>
+
         <Hora />
         <Bandera icon={<Quetzalt />} />
       </section>
